@@ -26,6 +26,9 @@ app.use(cors(
 app.use(express.json());
 
 app.use('/user',router);
+app.get('/', (req,res)=>{
+  res.send('hello world');
+})
 app.listen(process.env.PORT, () => {
   console.log("Server Started at port ", process.env.PORT);
 });
